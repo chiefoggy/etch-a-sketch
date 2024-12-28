@@ -38,3 +38,9 @@ body{
     border: 1px solid whitesmoke;
     flex: 1;
 }
+
+.color{
+    height: 50px;
+    width: 50px;
+    border-radius: 1000px;
+}
