@@ -1,0 +1,40 @@
+*{
+    font-family: 'Poppins', sans-serif;;
+}
+
+body{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    margin: 100px auto;
+    border: 1.5px solid grey;
+    width: 400px;
+    height: 400px;
+}
+
+.row{
+    display: flex;
+    flex: 1;
+}
+
+.buttons{
+    margin: 25px;
+    justify-content: space-between;
+}
+
+.title .h1{
+    text-align: center;
+}
+
+.square{
+    border: 1px solid whitesmoke;
+    flex: 1;
+}
