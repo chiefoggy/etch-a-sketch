@@ -19,15 +19,18 @@ randColorButton.addEventListener('click', () => {
 function createGrid(size) {
     const board = document.getElementById('board-container');
     board.innerHTML = ""; 
-
     for (let i = 0; i < size; i++) {
         const row = document.createElement('div');
         row.classList.add('row'); 
         for (let j = 0; j < size; j++) {
             const square = document.createElement('div');
-            
-
             square.addEventListener('mouseover', () => {
+                if (randColor == true){
+                    const r = Math.floor(Math.random() * 256);
+                    const g = Math.floor(Math.random() * 256);
+                    const b = Math.floor(Math.random() * 256);
+                    color = `rgb(${r},${g},${b})`;
+                }
                 square.style.cssText = `background-color: ${color}`;
             })
             
