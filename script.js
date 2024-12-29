@@ -61,5 +61,6 @@ newGridButton.addEventListener('click', () => {
     }
     else{
         alert("Invalid input! Please only input integers.");
+        gridLength = 16;
     }
 })
