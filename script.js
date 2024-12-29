@@ -1,4 +1,4 @@
-
+let gridLength = 16;
 let color = 'lightgrey';
 let randColor = false;
 
@@ -40,5 +40,26 @@ function createGrid(size) {
         board.appendChild(row); 
     }
 }
+createGrid(gridLength);
 
-createGrid(10);
+const clearButton = document.querySelector('.clear');
+clearButton.addEventListener('click', () => {
+    createGrid(gridLength);
+})
+
+const newGridButton = document.querySelector('.new-grid');
+newGridButton.addEventListener('click', () => {
+    gridLength = parseInt(prompt('Enter your desired grid length: '));
+    if (Number.isInteger(gridLength)){
+        if (gridLength > 100){
+            gridLength = 100;
+        }
+        else if (gridLength < 1){
+            gridLength = 5; 
+        }
+        createGrid(gridLength);
+    }
+    else{
+        alert("Invalid input! Please only input integers.");
+    }
+})
